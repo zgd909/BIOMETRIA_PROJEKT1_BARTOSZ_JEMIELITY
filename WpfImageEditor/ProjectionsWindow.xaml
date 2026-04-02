@@ -1,0 +1,34 @@
+<Window x:Class="WpfImageEditor.ProjectionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Projekcje" Height="500" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Projekcja pozioma (srednia jasnosc wierszy)" FontWeight="Bold"/>
+            <Border Grid.Row="1" BorderThickness="1" BorderBrush="Gray">
+                <Canvas x:Name="HorizCanvas" ClipToBounds="True" Margin="5"/>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Projekcja pionowa (srednia jasnosc kolumn)" FontWeight="Bold"/>
+            <Border Grid.Row="1" BorderThickness="1" BorderBrush="Gray">
+                <Canvas x:Name="VertCanvas" ClipToBounds="True" Margin="5"/>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
